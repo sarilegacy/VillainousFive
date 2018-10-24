@@ -89,6 +89,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33a9b9f1130382546a3a4d8473237c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  combatController: {fileID: 0}
+  dialogueController: {fileID: 0}
+  menuController: {fileID: 0}
+  attributes: 
+  speed: 0
 --- !u!212 &212352178983110186
 SpriteRenderer:
   m_ObjectHideFlags: 1

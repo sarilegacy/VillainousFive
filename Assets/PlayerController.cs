@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 
     public GameObject cam, combatController, dialogueController, menuController;
 
+    public string attributes;
+
     public float speed;
 
     [HideInInspector]

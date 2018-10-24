@@ -152,55 +152,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114305410397609204, guid: 977e5d68b082dae4a8ff2d8616999370,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 335638397}
+    - target: {fileID: 114305410397609204, guid: 977e5d68b082dae4a8ff2d8616999370,
+        type: 2}
+      propertyPath: combatController
+      value: 
+      objectReference: {fileID: 477846006}
+    - target: {fileID: 114305410397609204, guid: 977e5d68b082dae4a8ff2d8616999370,
+        type: 2}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 135814386}
     - target: {fileID: 1560335223333672, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
       propertyPath: m_Name
       value: Menu
-      objectReference: {fileID: 0}
-    - target: {fileID: 1785776540304838, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224469206547689248, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224469206547689248, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224469206547689248, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223599700955236322, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1402895980336172, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 223736648606596778, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 223352030381634042, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1981345368635694, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1395191335258458, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
@@ -430,14 +399,14 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 114171105075239144, guid: 8506c607e415a5f449275f0f9931ad2f,
-        type: 2}
-      propertyPath: speed
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &335638397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382948259902892, guid: 8506c607e415a5f449275f0f9931ad2f,
+    type: 2}
+  m_PrefabInternal: {fileID: 335638396}
 --- !u!4 &381422729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4107524626697490, guid: 7f135222e575e4048bc5215554567519,
@@ -564,6 +533,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114689658961315124, guid: f4b61d772dc765d4a89b07e315e2886e,
+        type: 2}
+      propertyPath: combatController
+      value: 
+      objectReference: {fileID: 477846006}
+    - target: {fileID: 114689658961315124, guid: f4b61d772dc765d4a89b07e315e2886e,
+        type: 2}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 135814386}
+    - target: {fileID: 114689658961315124, guid: f4b61d772dc765d4a89b07e315e2886e,
+        type: 2}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 276883819}
     - target: {fileID: 1975790659296848, guid: f4b61d772dc765d4a89b07e315e2886e, type: 2}
       propertyPath: m_Name
       value: FakeItem
@@ -780,6 +764,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09bcbe50aaabdc489c5e62da1a9ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  combatController: {fileID: 0}
+  dialogueController: {fileID: 0}
+  menuController: {fileID: 0}
+  attributes: 
+  speed: 0
 --- !u!50 &868311060
 Rigidbody2D:
   serializedVersion: 4
@@ -950,6 +940,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114197798104566870, guid: 5d875d2b703446f42b179c14c9732ec5,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 335638397}
+    - target: {fileID: 114197798104566870, guid: 5d875d2b703446f42b179c14c9732ec5,
+        type: 2}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 276883819}
+    - target: {fileID: 114197798104566870, guid: 5d875d2b703446f42b179c14c9732ec5,
+        type: 2}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 135814386}
     - target: {fileID: 223215936540293006, guid: 5d875d2b703446f42b179c14c9732ec5,
         type: 2}
       propertyPath: m_Camera
@@ -1075,6 +1080,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114307281685668462, guid: 8e537d857a2a5084c932f063eb02f454,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420028}
+    - target: {fileID: 114307281685668462, guid: 8e537d857a2a5084c932f063eb02f454,
+        type: 2}
+      propertyPath: combatController
+      value: 
+      objectReference: {fileID: 477846006}
+    - target: {fileID: 114307281685668462, guid: 8e537d857a2a5084c932f063eb02f454,
+        type: 2}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 135814386}
+    - target: {fileID: 114307281685668462, guid: 8e537d857a2a5084c932f063eb02f454,
+        type: 2}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 276883819}
     - target: {fileID: 1110210486417624, guid: 8e537d857a2a5084c932f063eb02f454, type: 2}
       propertyPath: m_Name
       value: NPC
@@ -1153,6 +1178,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114871219914462564, guid: 7f135222e575e4048bc5215554567519,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420028}
     - target: {fileID: 1877451102562474, guid: 7f135222e575e4048bc5215554567519, type: 2}
       propertyPath: m_Name
       value: Baddie
@@ -1263,6 +1293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09bcbe50aaabdc489c5e62da1a9ae87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  combatController: {fileID: 0}
+  dialogueController: {fileID: 0}
+  menuController: {fileID: 0}
+  attributes: 
+  speed: 0
 --- !u!50 &1581829035
 Rigidbody2D:
   serializedVersion: 4
@@ -1433,6 +1469,21 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114166141498725704, guid: 2a1286fdd6a2ace4fa60f9def8946a12,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 335638397}
+    - target: {fileID: 114166141498725704, guid: 2a1286fdd6a2ace4fa60f9def8946a12,
+        type: 2}
+      propertyPath: combatController
+      value: 
+      objectReference: {fileID: 477846006}
+    - target: {fileID: 114166141498725704, guid: 2a1286fdd6a2ace4fa60f9def8946a12,
+        type: 2}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 276883819}
     - target: {fileID: 223709648619437800, guid: 2a1286fdd6a2ace4fa60f9def8946a12,
         type: 2}
       propertyPath: m_Camera
@@ -1484,6 +1535,21 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114022670087805942, guid: 8930a0f379b427948b139a7e728d4587,
+        type: 2}
+      propertyPath: combatController
+      value: 
+      objectReference: {fileID: 477846006}
+    - target: {fileID: 114022670087805942, guid: 8930a0f379b427948b139a7e728d4587,
+        type: 2}
+      propertyPath: dialogueController
+      value: 
+      objectReference: {fileID: 135814386}
+    - target: {fileID: 114022670087805942, guid: 8930a0f379b427948b139a7e728d4587,
+        type: 2}
+      propertyPath: menuController
+      value: 
+      objectReference: {fileID: 276883819}
     - target: {fileID: 1970059219512186, guid: 8930a0f379b427948b139a7e728d4587, type: 2}
       propertyPath: m_Name
       value: FakeObject

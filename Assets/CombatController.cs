@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CombatController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject playerController, menuController, dialogueController;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +15,9 @@ public class CombatController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void CombatEvent()
+    {
+
+    }
 }

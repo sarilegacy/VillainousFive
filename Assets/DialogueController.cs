@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DialogueController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject playerController, combatController, menuController;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +15,9 @@ public class DialogueController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void DialogueEvent()
+    {
+
+    }
 }

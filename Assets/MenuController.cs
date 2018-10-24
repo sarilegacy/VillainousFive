@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour {
 
+    public GameObject playerController, combatController, dialogueController;
+
     // Use this for initialization
     void Start () {
 		

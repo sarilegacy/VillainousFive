@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    public GameObject cam, combatController, dialogueController, menuController;
+
+    public string attributes;
+
+    public float speed;
+
+    [HideInInspector]
+    private bool inMenu;
+
+    // Use this for initialization
+    void Start()
+    {
+        inMenu = false;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

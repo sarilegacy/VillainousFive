@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class WorldObjectController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public GameObject combatController, dialogueController, menuController;
+
+    public string attributes;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
