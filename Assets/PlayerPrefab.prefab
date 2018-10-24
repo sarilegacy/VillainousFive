@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c07f28871248db745aa9f72b3e8fb503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  battleController: {fileID: 0}
+  cam: {fileID: 0}
+  combatController: {fileID: 0}
   dialogueController: {fileID: 0}
   menuController: {fileID: 0}
-  cam: {fileID: 0}
   speed: 30
 --- !u!212 &212014582085478912
 SpriteRenderer:

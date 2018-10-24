@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public GameObject battleController, dialogueController, menuController, cam;
+    public GameObject cam, combatController, dialogueController, menuController;
 
     public float speed;
 
