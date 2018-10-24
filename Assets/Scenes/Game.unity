@@ -152,21 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 223352030381634042, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 223736648606596778, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
-    - target: {fileID: 223599700955236322, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 1560335223333672, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
       propertyPath: m_Name
       value: Menu
@@ -370,15 +355,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1382948259902892, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 114171105075239144, guid: 8506c607e415a5f449275f0f9931ad2f,
-        type: 2}
-      propertyPath: battleController
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 114171105075239144, guid: 8506c607e415a5f449275f0f9931ad2f,
         type: 2}
       propertyPath: dialogueController
@@ -394,10 +370,9 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
-    - target: {fileID: 50745413034605470, guid: 8506c607e415a5f449275f0f9931ad2f,
-        type: 2}
-      propertyPath: m_LinearDrag
-      value: 25
+    - target: {fileID: 1382948259902892, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
@@ -730,15 +705,15 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1298500907172844, guid: 2a1286fdd6a2ace4fa60f9def8946a12, type: 2}
-      propertyPath: m_Name
-      value: Dialogue
-      objectReference: {fileID: 0}
     - target: {fileID: 223709648619437800, guid: 2a1286fdd6a2ace4fa60f9def8946a12,
         type: 2}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1298500907172844, guid: 2a1286fdd6a2ace4fa60f9def8946a12, type: 2}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a1286fdd6a2ace4fa60f9def8946a12, type: 2}
   m_IsPrefabAsset: 0
@@ -784,10 +759,6 @@ Prefab:
     - target: {fileID: 1075866634373090, guid: fec840d72fb34f34bbcc7f4e66a2651b, type: 2}
       propertyPath: m_Name
       value: NPCs
-      objectReference: {fileID: 0}
-    - target: {fileID: 1831413146628724, guid: fec840d72fb34f34bbcc7f4e66a2651b, type: 2}
-      propertyPath: m_Name
-      value: Baddie3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fec840d72fb34f34bbcc7f4e66a2651b, type: 2}
