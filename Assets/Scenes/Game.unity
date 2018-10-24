@@ -394,6 +394,11 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 519420028}
+    - target: {fileID: 50745413034605470, guid: 8506c607e415a5f449275f0f9931ad2f,
+        type: 2}
+      propertyPath: m_LinearDrag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
   m_IsPrefabAsset: 0
@@ -779,6 +784,10 @@ Prefab:
     - target: {fileID: 1075866634373090, guid: fec840d72fb34f34bbcc7f4e66a2651b, type: 2}
       propertyPath: m_Name
       value: NPCs
+      objectReference: {fileID: 0}
+    - target: {fileID: 1831413146628724, guid: fec840d72fb34f34bbcc7f4e66a2651b, type: 2}
+      propertyPath: m_Name
+      value: Baddie3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fec840d72fb34f34bbcc7f4e66a2651b, type: 2}
