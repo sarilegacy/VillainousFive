@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour {
 
     public float speed;
 
+	private Animator anim;
+
     [HideInInspector]
     private bool inMenu;
 
@@ -19,6 +21,8 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         inMenu = false;
+
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +36,9 @@ public class PlayerController : MonoBehaviour {
 
             Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
             transform.GetComponent<Rigidbody2D>().AddForce(movement);
+
+			anim.SetFloat ("MoveX", Input.GetAxisRaw("Horizontal"));
+			anim.SetFloat ("MoveY", Input.GetAxisRaw ("Vertical"));
         }
 	}
 }
