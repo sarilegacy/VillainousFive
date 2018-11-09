@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
+	public Vector2 lastMove;
+
+
     [HideInInspector]
     private bool inMenu;
 
@@ -33,14 +36,25 @@ public class PlayerController : MonoBehaviour
         cameraPos = new Vector3(transform.position.x, transform.position.y, -5);
         cam.transform.position = cameraPos;
 
+		Vector2 movement = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
+
         if (!inMenu)
         {
+			if (movement != Vector2.zero) 
+			{
+				anim.SetBool ("IsPlayerMoving", true);
+				anim.SetFloat ("MoveX", movement.x);
+				anim.SetFloat ("MoveY", movement.y);
 
-            Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
-            transform.GetComponent<Rigidbody2D>().AddForce(movement);
+				lastMove = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
 
-            anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-            anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+			} else 
+				anim.SetBool ("IsPlayerMoving", false);
+				transform.GetComponent<Rigidbody2D> ().AddForce (movement);
+
+				anim.SetFloat ("LastMoveX", lastMove.x);
+				anim.SetFloat ("LastMoveY", lastMove.y);
         }
+
     }
 }

@@ -921,6 +921,16 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 50745413034605470, guid: 8506c607e415a5f449275f0f9931ad2f,
+        type: 2}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50745413034605470, guid: 8506c607e415a5f449275f0f9931ad2f,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58436835832063616, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
@@ -2799,8 +2809,7 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 23958078908311410, guid: 87432c911c2b47f41a00bdbe6fe1330e,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
