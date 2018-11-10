@@ -16,10 +16,14 @@ public class BaddieController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         inMenu = false;
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+	
 	}
+
+
 }
