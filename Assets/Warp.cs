@@ -8,7 +8,9 @@ public class Warp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        other.gameObject.transform.position = warpTarget.position;
-        Camera.main.transform.position = warpTarget.position;
+		if (other.gameObject.name == "PlayerPrefab") {
+			other.gameObject.transform.position = warpTarget.position;
+			Camera.main.transform.position = warpTarget.position;
+		}
     }
 }

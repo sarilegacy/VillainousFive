@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
         inMenu = false;
 
         anim = GetComponent<Animator>();
+
+		lastMove = new Vector2 (0, -1f);
     }
 
     // Update is called once per frame
