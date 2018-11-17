@@ -13,14 +13,17 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
-	public Vector2 lastMove;
-
-
     [HideInInspector]
     private bool inMenu;
 
     [HideInInspector]
     private Vector3 cameraPos;
+
+    private DialogueManger dman;
+    private DialogueManger2 dman2;
+    private DialogueManger3 dman3;
+    private DialogueManger4 dman4;
+
 
     // Use this for initialization
     void Start()
@@ -29,7 +32,10 @@ public class PlayerController : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
-		lastMove = new Vector2 (0, -1f);
+        dman = FindObjectOfType<DialogueManger>();
+        dman2 = FindObjectOfType<DialogueManger2>();
+        dman3 = FindObjectOfType<DialogueManger3>();
+        dman4 = FindObjectOfType<DialogueManger4>();
     }
 
     // Update is called once per frame
@@ -38,25 +44,17 @@ public class PlayerController : MonoBehaviour
         cameraPos = new Vector3(transform.position.x, transform.position.y, -5);
         cam.transform.position = cameraPos;
 
-		Vector2 movement = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
-
-        if (!inMenu)
+        if (dman.canmove == false && dman2.canmove == false && dman3.canmove == false && dman4.canmove == false)
         {
-			if (movement != Vector2.zero) 
-			{
-				anim.SetBool ("IsPlayerMoving", true);
-				anim.SetFloat ("MoveX", movement.x);
-				anim.SetFloat ("MoveY", movement.y);
+            if (!inMenu)
+            {
 
-				lastMove = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
+                Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+                transform.GetComponent<Rigidbody2D>().AddForce(movement);
 
-			} else 
-				anim.SetBool ("IsPlayerMoving", false);
-				transform.GetComponent<Rigidbody2D> ().AddForce (movement);
-
-				anim.SetFloat ("LastMoveX", lastMove.x);
-				anim.SetFloat ("LastMoveY", lastMove.y);
+                anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+                anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+            }
         }
-
     }
 }
