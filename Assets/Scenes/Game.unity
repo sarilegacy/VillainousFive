@@ -742,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ffbec962eda2dd4d8bcd7a6b46e38e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 0}
+  Item: {fileID: 1941928316738492, guid: 07c3755dad6ef1543a60a5da92f3963e, type: 2}
 --- !u!1 &271760406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2158,54 @@ Prefab:
     - target: {fileID: 4628008669390006, guid: 149400e8909e214458d991841fb1a38a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520234210515066, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_TagString
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866286682201124, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_TagString
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169754983726868, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_TagString
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977620126885844, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_TagString
+      value: Chest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556646545153240, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 61986673139264306, guid: 149400e8909e214458d991841fb1a38a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61951846065230274, guid: 149400e8909e214458d991841fb1a38a,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61986673139264306, guid: 149400e8909e214458d991841fb1a38a,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61951846065230274, guid: 149400e8909e214458d991841fb1a38a,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169754983726868, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977620126885844, guid: 149400e8909e214458d991841fb1a38a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149400e8909e214458d991841fb1a38a, type: 2}

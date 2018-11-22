@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
 
     private Animator anim;
 
-
     [HideInInspector]
     private bool inMenu;
 
@@ -69,5 +68,15 @@ public class PlayerController : MonoBehaviour
 					anim.SetFloat ("LastMoveY", lastMove.y);
             }
         }
+			
+
     }
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.tag == "Chest") 
+		{
+			Destroy (other.gameObject, 1);
+		}
+	}
 }
