@@ -10,8 +10,10 @@ public class PlayerController : MonoBehaviour
     public string attributes;
 
     public float speed;
+	public Vector2 lastMove;
 
     private Animator anim;
+
 
     [HideInInspector]
     private bool inMenu;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
         inMenu = false;
 
         anim = GetComponent<Animator>();
+		lastMove = new Vector2 (0, -1f);
 
         dman = FindObjectOfType<DialogueManger>();
         dman2 = FindObjectOfType<DialogueManger2>();
@@ -44,16 +47,26 @@ public class PlayerController : MonoBehaviour
         cameraPos = new Vector3(transform.position.x, transform.position.y, -5);
         cam.transform.position = cameraPos;
 
+		Vector2 movement = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
+
         if (dman.canmove == false && dman2.canmove == false && dman3.canmove == false && dman4.canmove == false)
         {
             if (!inMenu)
             {
+				if (movement != Vector2.zero) 
+				{
+					anim.SetBool ("IsPlayerMoving", true);
+					anim.SetFloat ("MoveX", movement.x);
+					anim.SetFloat ("MoveY", movement.y);
+				
+					lastMove = new Vector2 (Input.GetAxis ("Horizontal") * speed, Input.GetAxis ("Vertical") * speed);
+				 
+				} else
+					anim.SetBool ("IsPlayerMoving", false);
+              		transform.GetComponent<Rigidbody2D>().AddForce(movement);
 
-                Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
-                transform.GetComponent<Rigidbody2D>().AddForce(movement);
-
-                anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-                anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+					anim.SetFloat ("LastMoveX", lastMove.x);
+					anim.SetFloat ("LastMoveY", lastMove.y);
             }
         }
     }
