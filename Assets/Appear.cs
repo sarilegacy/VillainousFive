@@ -17,7 +17,7 @@ public class Appear : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Debug.Log(dMan.currentLine);
+        //Debug.Log(dMan.currentLine);
         if (dMan.currentLine > 1)
         {
             thehero.SetActive(true);

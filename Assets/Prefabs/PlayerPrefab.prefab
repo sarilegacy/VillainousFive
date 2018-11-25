@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50745413034605470}
   - component: {fileID: 114171105075239144}
   - component: {fileID: 58588621699759248}
-  - component: {fileID: 95126289485245992}
+  - component: {fileID: 95362111623204608}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -64,6 +64,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1901806680122052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4909913574713562}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4197170526411854
 Transform:
   m_ObjectHideFlags: 1
@@ -85,10 +100,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1382948259902892}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 26.73, y: -2.04, z: 0}
+  m_LocalPosition: {x: 26.39, y: -2.08, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 4197170526411854}
+  - {fileID: 4909913574713562}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -104,6 +120,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4197170526411854}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4909913574713562
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1901806680122052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4710201195769384}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &50745413034605470
 Rigidbody2D:
@@ -165,7 +194,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.04, y: 0.23}
   m_EdgeRadius: 0
---- !u!95 &95126289485245992
+--- !u!95 &95362111623204608
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -201,6 +230,7 @@ MonoBehaviour:
   attributes: 
   speed: 25
   lastMove: {x: 0, y: 0}
+  inMenu: 0
 --- !u!114 &114425189267777448
 MonoBehaviour:
   m_ObjectHideFlags: 1
