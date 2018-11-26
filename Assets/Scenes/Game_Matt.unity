@@ -885,14 +885,6 @@ Prefab:
       propertyPath: menuController
       value: 
       objectReference: {fileID: 276883819}
-    - target: {fileID: 1489385140876740, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
-      propertyPath: m_TagString
-      value: Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 1901806680122052, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8506c607e415a5f449275f0f9931ad2f, type: 2}
   m_IsPrefabAsset: 0
@@ -2329,12 +2321,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d875d2b703446f42b179c14c9732ec5, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &949174813 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114612000756854978, guid: 977e5d68b082dae4a8ff2d8616999370,
-    type: 2}
-  m_PrefabInternal: {fileID: 2129741628}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &999625797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,11 +4310,6 @@ Prefab:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 114305410397609204, guid: 977e5d68b082dae4a8ff2d8616999370,
-        type: 2}
-      propertyPath: amount
-      value: 
-      objectReference: {fileID: 949174813}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 977e5d68b082dae4a8ff2d8616999370, type: 2}
   m_IsPrefabAsset: 0

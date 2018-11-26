@@ -1962,7 +1962,7 @@ MonoBehaviour:
   inventorySlots: []
   weaponSlot: {fileID: 114312557323062838}
   equipmentSlot: {fileID: 114755032984281222}
-  amount: {fileID: 0}
+  amount: {fileID: 114612000756854978}
 --- !u!114 &114312557323062838
 MonoBehaviour:
   m_ObjectHideFlags: 1
