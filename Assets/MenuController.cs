@@ -35,19 +35,45 @@ public class MenuController : MonoBehaviour {
 
         if(weapon.transform.childCount > 0)
         {
-            weaponSlot.transform.GetComponentInChildren<Image>().sprite = weapon.transform.GetComponentInChildren<SpriteRenderer>().sprite;
-            weaponSlot.transform.GetComponentInChildren<Image>().enabled = true;
+            weaponSlot.transform.GetChild(0).GetComponent<Image>().sprite = weapon.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite;
+            weaponSlot.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
-            weaponSlot.transform.GetComponentInChildren<Image>().sprite = null;
-            weaponSlot.transform.GetComponentInChildren<Image>().enabled = false;
+            weaponSlot.transform.GetChild(0).GetComponent<Image>().sprite = null;
+            weaponSlot.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        int i = 0;
+        foreach(Transform child in inventory.transform)
+        {
+            inventoryMenu.transform.GetChild(i).GetChild(0).GetComponent<Image>().sprite = child.GetComponent<SpriteRenderer>().sprite;
+            inventoryMenu.transform.GetChild(i).GetChild(0).gameObject.SetActive(true);
+            i++;
+        }
+        for(int j = 15; j >= i; j--)
+        {
+            inventoryMenu.transform.GetChild(j).GetChild(0).gameObject.SetActive(false);
         }
 	}
 
-    public void InventoryButton()
+    public void InventoryButton(Button button)
     {
-        Debug.Log("Pushed inventory button");
+        if(inventory.transform.childCount > button.transform.GetSiblingIndex())
+        {
+            Transform selectedItem = inventory.transform.GetChild(button.transform.GetSiblingIndex());
+            if (selectedItem.tag == "Weapon")
+            {
+                if (weapon.transform.childCount == 0)
+                {
+                    selectedItem.SetParent(weapon.transform);
+                }
+                else
+                {
+                    weapon.transform.GetChild(0).transform.SetParent(inventory.transform);
+                    selectedItem.SetParent(weapon.transform);
+                }
+            }
+        }
     }
 
     public void WeaponButton()
@@ -56,7 +82,6 @@ public class MenuController : MonoBehaviour {
         {
             weapon.transform.GetChild(0).transform.SetParent(inventory.transform);
         }
-
     }
 
     public void EquipmentButton()
