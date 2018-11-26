@@ -32,6 +32,17 @@ public class MenuController : MonoBehaviour {
             inGameMenu = !inGameMenu;
             playerController.GetComponent<PlayerController>().inMenu = inGameMenu;
         }
+
+        if(weapon.transform.childCount > 0)
+        {
+            weaponSlot.transform.GetComponentInChildren<Image>().sprite = weapon.transform.GetComponentInChildren<SpriteRenderer>().sprite;
+            weaponSlot.transform.GetComponentInChildren<Image>().enabled = true;
+        }
+        else
+        {
+            weaponSlot.transform.GetComponentInChildren<Image>().sprite = null;
+            weaponSlot.transform.GetComponentInChildren<Image>().enabled = false;
+        }
 	}
 
     public void InventoryButton()
@@ -41,7 +52,10 @@ public class MenuController : MonoBehaviour {
 
     public void WeaponButton()
     {
-        Debug.Log("Pushed weapon button");
+        if(weapon.transform.childCount > 0)
+        {
+            weapon.transform.GetChild(0).transform.SetParent(inventory.transform);
+        }
 
     }
 
