@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour {
     public GameObject playerController, playerMenu, gameMenu, inventory, inventoryMenu, weapon;
     public Button[] inventorySlots;
     public Button weaponSlot, equipmentSlot;
+    public Text amount;
 
     private bool inPlayerMenu, inGameMenu;
 
@@ -54,6 +55,7 @@ public class MenuController : MonoBehaviour {
         {
             inventoryMenu.transform.GetChild(j).GetChild(0).gameObject.SetActive(false);
         }
+        amount.text = playerController.GetComponent<PlayerController>().coins.ToString();
 	}
 
     public void InventoryButton(Button button)

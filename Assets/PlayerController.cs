@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
 	public Vector2 lastMove;
     private Animator anim;
 
+    public int coins = 0;
+
     [HideInInspector]
     public bool inMenu;
 

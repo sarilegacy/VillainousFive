@@ -8,6 +8,8 @@ public class CoinPickUp : MonoBehaviour {
 		if (other.GetComponent<PlayerController> () == null)
 			return;
 
-		Destroy (gameObject);
+        other.GetComponent<PlayerController>().coins++;
+
+        Destroy (gameObject);
 	}
 }
